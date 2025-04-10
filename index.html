@@ -33,11 +33,11 @@
                 <h1>Vidriería Nayeli</h1>
             </div>
             <div class="navegacion">
-                <a href="">Inicio</a>
-                <a href="">Nosotros</a>
-                <a href="">Materiales</a>
-                <a href="">Galeria</a>
-                <a href="">Contacto</a>
+                <a href="#inicio" class="selected-a">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#materiales">Materiales</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </div>
     </header>
@@ -149,14 +149,14 @@
         <section id="galeria" class="container-section">
             <h2>Galería</h2>
             <h3>Puertas</h3>
-            <div class="container-galeria">
-                <img src="imagenes/productos/puerta_1.jpg" alt="Puerta de aluminio" class="img-izquierda">
-                <div class="container-flex">
-                    <button class="btn-galeria btn-anterior">&#8249;</button>
-                    <img src="imagenes/productos/puerta_2.jpg" alt="Puerta de aluminio" class="img-seleccionada">
-                    <button class="btn-galeria btn-siguiente">&#8250;</button>
-                </div>
-                <img src="imagenes/productos/puerta_3.jpg" alt="Puerta de aluminio" class="img-derecha">
+            <div id="galeria_puertas" class="container-galeria">
+                <button class="btn-galeria btn-anterior">&#8249;</button>
+                <img src="imagenes/productos/puerta_1.jpg" alt="Puerta de aluminio">
+                <img src="imagenes/productos/puerta_2.jpg" alt="Puerta de aluminio">
+                <img src="imagenes/productos/puerta_3.jpg" alt="Puerta de aluminio">
+                <img src="imagenes/productos/puerta_4.jpg" alt="Puerta de aluminio">
+                <img src="imagenes/productos/puerta_5.jpg" alt="Puerta de aluminio">
+                <button class="btn-galeria btn-siguiente">&#8250;</button>
             </div>
         </section>
         <section id="contacto" class="container-section">
@@ -186,5 +186,6 @@
 
     <script src="js/cambio_servicios.js"></script>
     <script src="js/cambio_imagen.js"></script>
+    <script src="js/funciones_header.js"></script>
 </body>
 </html>
