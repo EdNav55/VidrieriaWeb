@@ -313,9 +313,10 @@ main {
     height: 70vh;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 5px;
     overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
 
 .container-galeria img {

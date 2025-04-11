@@ -54,8 +54,6 @@ function funcionesGaleria(ruta_imagenes, id) {
     btnSiguiente.addEventListener("mouseup", detenerDesplazamiento);
 
     btnSiguiente.addEventListener("mouseleave", detenerDesplazamiento);
-
-    console.log(contenedorGaleria.offsetWidth);
 }
 
 const imagenes_puertas = [
@@ -71,3 +69,13 @@ const imagenes_puertas = [
 ]
 
 funcionesGaleria(imagenes_puertas, "galeria_puertas");
+
+function cambioImagen() {
+    const contenedorGaleria = document.getElementById(`galeria_puertas`);
+    const primerHijo = contenedorGaleria.children[1];
+    const ultimoHijo = contenedorGaleria.children[6];
+
+    console.log(contenedorGaleria.offsetWidth);
+    console.log(primerHijo.offsetWidth);
+    primerHijo.style.transform = `translateX(${contenedorGaleria.offsetWidth}px)`;
+}
