@@ -24,6 +24,8 @@ body {
     font-weight: bold;
 }
 
+/* Sección header */
+
 header {
     width: 100%;
     position: fixed;
@@ -32,8 +34,9 @@ header {
 
 .top-header {
     background-color: #3d5672;
-    padding: 0 1rem;
-    width: 100vw;
+    padding: 0;
+    padding-left: 0.5rem;
+    width: 100%;
     height: 30px;
     color: white;
     justify-content: space-between;
@@ -82,7 +85,7 @@ a {
 }
 
 .logo, h3 {
-    font-family: "Boldonse", system-ui;
+    font-family: "Francois One", system-ui;
     font-size: 1rem;
 }
 
@@ -124,6 +127,8 @@ a {
     width: 100%;
 }
 
+/* Contnedor  */
+
 main {
     margin: 0 auto;
     padding: 0;
@@ -146,7 +151,7 @@ main {
 
 #inicio h1 {
     color: #ececec;
-    font-family: "Boldonse", system-ui;
+    font-family: "Francois One", system-ui;
     font-size: 2.3rem;
     width: 500px;
     text-align: center;
@@ -297,14 +302,14 @@ main {
 }
 
 #galeria {
-    height: 250vh;
+    height: auto;
 }
 
 #galeria h3 {
     font-size: 2rem;
     font-weight: bold;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .container-galeria {
@@ -313,15 +318,21 @@ main {
     height: 70vh;
     margin: 0 auto;
     display: flex;
-    /* justify-content: center; */
-    gap: 5px;
     overflow: hidden;
-    transition: transform 0.5s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.container-galeria:not:last-child {
+
+}
+
+.container-galeria div {
+    display: flex;
+    gap: 5px;
 }
 
 .container-galeria img {
     height: 70vh;
-    transition: transform 0.3s ease-out;
 }
 
 .btn-galeria {
@@ -350,7 +361,6 @@ main {
 .btn-galeria:hover {
     background-color: #3d3d3d;
     opacity: 1;
-    transform: scale(1.05);
 }
 
 @keyframes mueve-img-izq {
@@ -400,4 +410,8 @@ main {
 
 .horario {
     width: 90%;
+}
+
+@media (max-width: 864px) {
+    
 }
