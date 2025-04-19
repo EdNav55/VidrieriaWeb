@@ -127,7 +127,7 @@ a {
     width: 100%;
 }
 
-/* Contnedor  */
+/* Contenedor de todas las secciones  */
 
 main {
     margin: 0 auto;
@@ -137,6 +137,8 @@ main {
     flex-direction: column;
     background-color: #ececec;
 }
+
+/* Panatalla inicial */
 
 #inicio {
     width: 100%;
@@ -170,6 +172,8 @@ main {
     transform: scale(1.05);
 }
 
+/* Diseño de section */
+
 .container-section {
     display: flex;
     flex-direction: column;
@@ -194,13 +198,19 @@ main {
     background-color: black;
 }
 
+/* Sección. Sobre nosotros */
+
 .dos-columnas {
     height: 85%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    column-gap: 2rem;
+    gap: 1rem;
     font-size: 20px;
+}
+
+.dos-columnas p {
+    margin: 0;
 }
 
 .dos-columnas img {
@@ -222,8 +232,10 @@ main {
     background-color: #e0e0e0;
 }
 
+/* Sección. Materiales */
+
 .container-materiales {
-    width: 70%;
+    width: 100%;
     height: 80%;
     background-color: #ececec;
     margin: auto;
@@ -276,7 +288,7 @@ main {
 .materiales-li div {
     height: 100%;
     margin: auto 0;
-    flex: 0 0 250px;
+    flex: 0 0 300px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -289,7 +301,7 @@ main {
 
 .materiales-li img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain ;
     overflow: hidden;
 }
 
@@ -300,6 +312,8 @@ main {
 .hidden {
     display: none;
 }
+
+/* Sección galeria */
 
 #galeria {
     height: auto;
@@ -319,11 +333,10 @@ main {
     margin: 0 auto;
     display: flex;
     overflow: hidden;
-    margin-bottom: 2rem;
 }
 
-.container-galeria:not:last-child {
-
+.container-galeria:not(:last-child) {
+    margin-bottom: 2rem;
 }
 
 .container-galeria div {
@@ -363,16 +376,7 @@ main {
     opacity: 1;
 }
 
-@keyframes mueve-img-izq {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(-50%) scale(0.9);
-        opacity: 0.7;
-    }
-}
+/* Sección contacto */
 
 #contacto a {
     color: black;
@@ -412,6 +416,93 @@ main {
     width: 90%;
 }
 
-@media (max-width: 864px) {
+/* Pantalla menor a 864px */
+
+@media (max-width: 873px) and (min-width: 670px) {
+
+    /* Header */
+
+    .top-header a {
+        font-size: 12px;
+    }
+
+    /* Sección nosotros */
+
+    .dos-columnas img {
+        object-fit: contain;
+        grid-row: 1;
+    }
+
+    .dos-columnas {
+        font-size: 16px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+
+    .dos-columnas div {
+        grid-row: 2;
+    }
+
+    /* Sección materiales */
+
+    .materiales-li {
+        gap: 0.5rem;
+    }
+
+    .materiales-li div {
+        flex: 0 0 150px;
+    }
+
+    /* Seccion contacto */
+
+    #contacto iframe {
+        height: 60%;
+    }
+}
+
+@media (max-width: 670px) {
     
+    /* Header */
+
+    .logo {
+        font-size: 10px;
+    }
+
+    .top-header a {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* Sección nosotros */
+
+    .dos-columnas img {
+        object-fit: contain;
+        grid-row: 1;
+    }
+
+    .dos-columnas {
+        font-size: 16px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+
+    .dos-columnas div {
+        grid-row: 2;
+    }
+
+    /* Sección materiales */
+
+    .materiales-li {
+        gap: 0.5rem;
+    }
+
+    .materiales-li div {
+        flex: 0 0 150px;
+    }
+
+    /* Seccion contacto */
+
+    #contacto iframe {
+        height: 60%;
+    }
 }
