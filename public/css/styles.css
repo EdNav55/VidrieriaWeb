@@ -1,0 +1,638 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: "Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.container-flex {
+    display: flex;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Sección header */
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+.top-header {
+    background-color: #3d5672;
+    padding: 0;
+    padding-left: 0.5rem;
+    width: 100%;
+    height: 30px;
+    color: white;
+    justify-content: space-between;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-header a:hover {
+    text-decoration: underline;
+}
+
+.botones-contacto a {
+    width: 35px;
+    height: 30px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in;
+}
+
+.botones-contacto a:hover{
+    background-color: #324459;
+}
+
+.botones-contacto a img {
+    height: 20px;
+}
+
+.bottom-header {
+    padding: 0 1rem;
+    height: 5rem;
+    width: 100%;
+    background-color: #ffffffb3;
+    justify-content: space-between;
+    transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.bottom-header-scroll {
+    height: 4rem;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.logo, h3 {
+    font-family: "Francois One", system-ui;
+    font-size: 1rem;
+}
+
+.logo img {
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.navegacion {
+    display: flex;
+    gap: 10px;
+}
+
+.navegacion a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in, border-bottom 0.3s ease-in;
+    position: relative;
+}
+
+.navegacion a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #022e64;
+    transition: width 0.3s ease-in, left 0.3s ease-in;
+}
+
+.navegacion a:hover, .navegacion .selected-a {
+    color: #022e64;
+}
+
+.navegacion a:hover::after, .navegacion .selected-a::after {
+    left: 0;
+    width: 100%;
+}
+
+/* Contenedor de todas las secciones  */
+
+main {
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    /* max-width: 1800px; */
+    flex-direction: column;
+    background-color: #ececec;
+}
+
+/* Panatalla inicial */
+
+#inicio {
+    width: 100%;
+    position: relative;
+    top: 30px;
+    height: 90vh;
+    background-image: url("../imagenes/background_inicio.jpg");
+    background-size: cover;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#inicio h1 {
+    color: #ececec;
+    font-family: "Francois One", system-ui;
+    font-size: 2.3rem;
+    width: 500px;
+    text-align: center;
+}
+
+.boton-link {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #3d5672;
+    border-radius: 1rem;
+    font-size: 20px;
+    transition: transform 0.2s ease-in;
+}
+
+.boton-link:hover {
+    transform: scale(1.05);
+}
+
+/* Diseño de section */
+
+.container-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+}
+
+.container-section h2 {
+    font-size: 30px;
+    position: relative;
+}
+
+.container-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+/* Sección. Sobre nosotros */
+
+.dos-columnas {
+    height: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+.dos-columnas p {
+    margin: 0;
+}
+
+.dos-columnas img {
+    grid-column: 1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dos-columnas div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#materiales, #contacto {
+    background-color: #e0e0e0;
+}
+
+/* Sección. Materiales */
+
+.container-materiales {
+    width: 100%;
+    height: 80%;
+    background-color: #ececec;
+    margin: auto;
+}
+
+.container-materiales ul {
+    width: 25%;
+    height: 100%;
+    border-right: 3px solid #3d5672;
+    box-shadow: 2px 0 0 0 #3d5672;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0;
+    z-index: 1;
+}
+
+.container-materiales li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container-materiales li:not(:last-child) {
+    border-bottom: 1px solid #3d5672;
+}
+
+.materiales-sel {
+    background-color: #3d5672;
+    color: white;
+}
+
+.container-materiales > div {
+    width: 100%;
+    height: 100%;
+}
+
+.materiales-li {
+    width: 100%;
+    height: 100%;
+}
+
+.materiales-li div {
+    height: 100%;
+    margin: auto 0;
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.materiales-li p {
+    flex: 1;
+    text-align: justify;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.materiales-li img {
+    width: 100%;
+    object-fit: contain ;
+    overflow: hidden;
+}
+
+.visible {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Sección galeria */
+
+#galeria {
+    height: auto;
+}
+
+#galeria h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.container-galeria {
+    position: relative;
+    width: 75vw;
+    height: 70vh;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+}
+
+.container-galeria:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.container-galeria div {
+    display: flex;
+    gap: 5px;
+}
+
+.container-galeria img {
+    height: 70vh;
+}
+
+.btn-galeria {
+    position: absolute;
+    background-color: transparent;
+    z-index: 3;
+    cursor: pointer;
+    width: 80px;
+    height: 100%;
+    border: 0;
+    font-size: 5rem;
+    color: rgb(185, 185, 185);
+    transition: background-color 0.3s ease-in, opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.btn-anterior {
+    background-image: linear-gradient(90deg, #3d3d3d, transparent);
+    left: 0;
+}
+
+.btn-siguiente {
+    background-image: linear-gradient(90deg, transparent, #3d3d3d);
+    right: 0;
+}
+
+.btn-galeria:hover {
+    background-color: #3d3d3d;
+    opacity: 1;
+}
+
+/* Sección contacto */
+
+#contacto a {
+    color: black;
+}
+
+#contacto img {
+    height: 2rem;
+    filter:invert();
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in;
+    margin: 0 0.5rem;
+}
+
+#contacto img:hover {
+    opacity: 1;
+}
+
+#contacto > div {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.centrar-elementos {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+#contacto > div > div {  
+    width: 90%;
+}
+
+.horario {
+    width: 90%;
+}
+
+/* Ancho de pantalla menor a 864px y mayor a 670px */
+
+@media (max-width: 873px) and (min-width: 670px) {
+
+    /* Header */
+
+    .top-header a {
+        font-size: 12px;
+    }
+
+    /* Sección nosotros */
+
+    .dos-columnas img {
+        object-fit: contain;
+        grid-row: 1;
+    }
+
+    .dos-columnas {
+        font-size: 16px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+
+    .dos-columnas div {
+        grid-row: 2;
+    }
+
+    /* Sección materiales */
+
+    .materiales-li {
+        gap: 0.5rem;
+    }
+
+    .materiales-li div {
+        flex: 0 0 40%;
+    }
+
+    /* Seccion contacto */
+
+    #contacto iframe {
+        height: 60%;
+    }
+}
+
+/* Ancho de pantalla menor a 670px y mayor a 510px */
+
+@media (max-width: 670px) and (min-width: 510px) {
+    
+    /* Header */
+
+    .logo {
+        font-size: 10px;
+    }
+
+    .top-header a {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* Sección nosotros */
+
+    .dos-columnas img {
+        object-fit: contain;
+        grid-row: 1;
+    }
+
+    .dos-columnas {
+        font-size: 14px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+
+    .dos-columnas div {
+        grid-row: 2;
+    }
+
+    /* Sección materiales */
+
+    .container-materiales li {
+        font-size: 14px;
+    }
+
+    .materiales-li {
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+
+    .materiales-li div {
+        order: 2;
+        flex: 0 0 60%;
+        overflow: hidden;
+    }
+
+    .materiales-li img {
+        object-fit: cover;
+    }
+
+    .materiales-li p {
+        font-size: 14px;
+    }
+
+    /* Seccion contacto */
+
+    #contacto iframe {
+        height: 60%;
+    }
+}
+
+    /* Ancho de pantalla menor a 510px */
+
+@media (max-width: 510px) {
+
+    /* Diseño section */
+
+    .container-section {
+        padding: 2rem 0;
+    }
+
+    /* Header */
+
+    .bottom-header {
+        padding: 0;
+    }
+
+    .navegacion {
+        gap: 5px;
+    }
+
+    .navegacion a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 8px;
+    }
+
+    .logo img {
+        height: 2rem;
+    }
+
+    .top-header a {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /* Sección inicio */
+
+    #inicio h1 {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .boton-link {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    /* Sección nosotros */
+
+    .dos-columnas img {
+        object-fit: contain;
+        grid-row: 1;
+    }
+
+    .dos-columnas {
+        font-size: 14px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+
+    .dos-columnas div {
+        grid-row: 2;
+    }
+
+    /* Sección materiales */
+
+    .container-materiales li {
+        font-size: 14px;
+    }
+
+    .materiales-li {
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+
+    .materiales-li div {
+        order: 2;
+        flex: 0 0 60%;
+        overflow: hidden;
+    }
+
+    .materiales-li img {
+        object-fit: cover;
+    }
+
+    .materiales-li p {
+        font-size: 14px;
+    }
+
+    /* Sección galeria */
+
+    .container-galeria {
+        width: 90vw;
+    }
+
+    .btn-galeria {
+        display: none;
+    }
+
+    /* Seccion contacto */
+
+    #contacto iframe {
+        height: 60%;
+    }
+}
